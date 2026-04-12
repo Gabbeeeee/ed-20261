@@ -11,7 +11,7 @@ void ler_vetor(int v[], int tamanho) {
     }
 }
 
-float buscar(int tamanho, float vetor[], float valor) {
+float busca_sequencial(int tamanho, float vetor[], float valor) {
 
     for (int i = 0; i < tamanho; i++) {
         if (vetor[i] == valor) {
