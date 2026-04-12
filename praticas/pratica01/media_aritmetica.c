@@ -1,10 +1,8 @@
 #include <stdio.h> 
 
-float media_aritmetica(float array[], int n) 
-{
-    if(n>100 || n == 0 || array == 0) {
-        return 0;
-    }
+float media_aritmetica(float array[], int n) {
+    if(n>100 || n == 0 || array == 0) {return 0;}
+
     float soma = 0;
     for(int i = 0; i < n; i++) {
         soma += array[i];
@@ -15,6 +13,7 @@ float media_aritmetica(float array[], int n)
 int main() {
 
     //TESTES
+
     float media = 0;
 
     float array1[10] = {1,2,3,4,5,6,7,8,9,10}; // n = 10
@@ -36,7 +35,6 @@ int main() {
     float array5[4] = {-50,100,-75,-30}; // negativos
     media = media_aritmetica(array5, 4);
     printf("Media de {-50,100,-75,-30} = %.1f\n", media);
-
 
     return 0;
 }

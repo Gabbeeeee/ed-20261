@@ -12,12 +12,10 @@ typedef struct {
 } Cedulas;
 
 
-Cedulas qnt_cedulas(int valor) 
-{
+Cedulas qnt_cedulas(int valor) {
     Cedulas c = {0};  //inicializa struct toda com zero
 
-    if (valor <= 0 || valor > 1000) 
-    {
+    if (valor <= 0 || valor > 1000) {
         c.resto = -1; //indica erro
         printf("Erro: valor maximo excedido.\n");
         return c;

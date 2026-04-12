@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-float calcular_imc(float altura, float peso) 
-{
+float calcular_imc(float altura, float peso) {
     if(altura <= 0.0f || peso <= 0.0f) {
         return 0.0f;
     }

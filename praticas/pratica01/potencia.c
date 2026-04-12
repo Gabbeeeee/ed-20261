@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-float calcular_potencia(float base, int exp) 
-{
+float calcular_potencia(float base, int exp) {
     if (base == 0) {return 0;}
     if (exp <= 0) {return 1;}
 
@@ -30,6 +29,7 @@ int main() {
 
     potencia = calcular_potencia(10,-1);
     printf("10^(-1) = %.1f => %i\n", potencia, (potencia == 1));
+
 
     return 0;
 }
