@@ -3,29 +3,29 @@
 
 #include <stdio.h>
 #include <time.h>
-#define N 10
+#define n 10
 
-void percorrer_duplo(int m[N][N]) {  // Percorrendo com dois laços
-    for (int i = 0; i < N; i++) {
-        for (int j = 0; j < N; j++) {
+void percorrer_duplo(int m[n][n]) {  // Percorrendo com dois laços: O(n²)
+    for (int i = 0; i < n; i++) {          // n * n
+        for (int j = 0; j < n; j++) {
             printf("%d ", m[i][j]);
         }
     }
 }
 
-void percorrer_unico(int m[N][N]) { // Percorrendo com um laço
-    for (int k = 0; k < N * N; k++) {
-        int i = k / N;
-        int j = k % N;
+void percorrer_unico(int m[n][n]) { // Percorrendo com um laço: O(n²)
+    for (int k = 0; k < n * n; k++) {    // n * n
+        int i = k / n;
+        int j = k % n;
         printf("%d ", m[i][j]); 
     }
 }
 
 int main() {
 
-    int matriz[N][N];
-    for (int i = 0; i < N; i++) { // Inicializando a matriz
-        for (int j = 0; j < N; j++) {
+    int matriz[n][n];
+    for (int i = 0; i < n; i++) { // Inicializando a matriz
+        for (int j = 0; j < n; j++) {
             matriz[i][j] = i + j;
         }
     }
