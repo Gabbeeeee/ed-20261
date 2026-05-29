@@ -1,9 +1,15 @@
 #ifndef TABELA_HASH_H
 #define TABELA_HASH_H
 
+typedef struct No {
+    int dado;
+    struct No *proximo;
+} No;
+
 typedef struct {
-    int *dados;
+    No **dados; // array de ponteiros
     int quantidade;
+    int tamanho;
 } TabelaHash;
 
 TabelaHash *criar(int tamanho);
